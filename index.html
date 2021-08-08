@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="./js/index.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Fallout Memory Game</title>
     <!-- TODO: Connect the given styles file to this HTML -->
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -17,10 +21,10 @@
 
         <section class="score-panel">
             <h3>Score Panel</h3>
-        <ul id="star-rating" class="star-rating">
-            <li class="star"><i class="fa fa-star"></i></li>
-            <li class="star"><i class="fa fa-star"></i></li>
-            <li class="star"><i class="fa fa-star"></i></li>
+            <ul id="star-rating" class="star-rating">
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
+                <li class="star"><i class="fa fa-star"></i></li>
             </ul>
             <span class="moves-counter">0</span> Moves
             <div class="timer-container">
@@ -32,15 +36,30 @@
         </section>
         <!-- Modal section-->
         <table>
-            <tr class="deck"></tr>
+            <tr>
+                <!-- had to move class "deck" to a div to center square -->
+                <div class="deck"></div>
+            </tr>
         </table>
     </div>
 
     <!-- Modal -->
-    <section class="win-game-modal">
-        
+    <section>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span id="close">&times;</span>
+                <h2> Congratulations!!</h2>
+                <h2 id="line">You found all 8 pairs! You win!</h2>
+                <img src="./img/Vault-Boy-Thumb-Up.jpg" alt="">
+                <button class="btn"> <span class= "play-again-btn">Play Again?</span> </button>
+                <br>
+            </div>
+
+        </div>
+
     </section>
 
     <!-- TODO: Connect the given JS file to your HTML -->
 </body>
+
 </html>
